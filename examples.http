@@ -1,0 +1,19 @@
+POST http://localhost:56940/payments
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "value": 100.00,
+  "status": "CREATED",
+  "orderId": 1,
+  "paymentMethodId": 1
+}
+
+###
+
+GET http://matrixnew:8082/payments-ms/payments
+
+###
+
+PATCH http://matrixnew:8082/payments-ms/payments/1/confirm
+Content-Type: application/json
